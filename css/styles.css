@@ -1,28 +1,36 @@
- /*centers the navbar items*/
-@media (min-width: 768px){
-    .navbar-nav{
-        float:none;
-        margin: 0 auto;
-        display: table;
-        table-layout: fixed;
-    }
-}
-
 body {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: none; }
 
-.italic {
-    font-style: italic;
-}
+.copy {
+  text-align: center; }
 
-@media (min-width: 992px) {
-    .extra-padding {
-        padding-top: 3em;
-    }
-}
+.container {
+  margin: 8% 10%;
+  border: none; }
 
-.divider {
-    padding: 3em 0 3em 0;
-}
+.navigation {
+  border: none;
+  display: inline-block;
+  margin: 5% 2.5% 0;
+  width: 92%; }
+  .navigation .navbox {
+    border: 1px solid black;
+    width: 23%;
+    height: 9.6em;
+    float: left;
+    margin: 0 0.5%; }
+    .navigation .navbox:first-child {
+      margin-left: 2.5%; }
+    .navigation .navbox:last-child {
+      margin-right: 0; }
+    .navigation .navbox p {
+      margin: 0; }
+
+#whoIsPierre > div {
+  display: inline-block;
+  vertical-align: middle; }
+#whoIsPierre #random {
+  text-align: left; }
+  #whoIsPierre #random .inactive {
+    color: #CCC; }

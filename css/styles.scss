@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+$fonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Shows borders during development. Set to `none` for production
+$debugBorder: none;
+
+// Navobx properties
+$navboxFontSize: 1.2em;
+$navboxWidth: 23%;
+$navboxHeight: 8 * $navboxFontSize;
+$navboxSpacing: 1%;
+
+// calculates the margin required to center the 4 navboxes
+$requiredMarginBeforeNavbox: ((100% - (4 * $navboxWidth + 3* $navboxSpacing)) / 2);
+
+
+body {
+    font-family: $fonts;
+    border: $debugBorder;
+}
+
+.copy {
+    text-align: center;
+}
+
+.container {
+    margin: 8% 10%;
+    border: $debugBorder;
+}
+
+// The div holding all of the navboxes
+.navigation {
+  border: $debugBorder;
+  // inline-block makes the element and its children have the size of their contents in the DOM
+  display: inline-block;
+  margin: 5% $requiredMarginBeforeNavbox 0;
+  width: 4 * $navboxWidth;
+  .navbox {
+    border: 1px solid black;
+    width: $navboxWidth;
+    height: $navboxHeight;
+    float: left;
+    // divided by 2 to split it equally on both sides of the element
+    margin: 0 ($navboxSpacing / 2);
+    &:first-child {
+      margin-left: $requiredMarginBeforeNavbox;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+#whoIsPierre {
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #constant {
+  }
+  #random {
+    text-align: left;
+    .inactive {
+      color: #CCC;
+    }
+  }
+}
